@@ -1,0 +1,12 @@
+## Static configuration
+[providers.docker]
+    network = "traefik"
+
+[api]
+    insecure = true
+
+[entryPoints]
+    [entryPoints.web]
+        address = ":80"
+    [entryPoints.websecure]
+        address = ":443"
