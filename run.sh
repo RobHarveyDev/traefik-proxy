@@ -1,4 +1,6 @@
-docker network create traefik || true
+#!/bin/bash
+
+docker network inspect traefik >/dev/null 2>&1 || docker network create traefik
 
 if [ "$(docker ps -q -f name=traefik)" ]; then
     docker stop traefik
